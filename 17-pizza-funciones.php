@@ -5,20 +5,17 @@ function pizza($costo)
 	$total = $costo * 1.16;
 	return $total;
 }
+$valor_total = pizza('200');
+echo $valor_total;
 
-$valor_iva = pizza('200');
-echo $valor_iva . "<br>";
-
-
-function operacion($valor_iva)
+function pago($valor_total)
 {
-	$banco = 50;
-	if ($valor_iva < $banco) {
-		echo "Tu pago ha sido realizado";
+	$banco = 400;
+	if ($valor_total < $banco) {
+		echo "Tu pago ha sido exitoso";
 	} else {
 		echo "Fondos insuficientes";
 	}
 }
-
-operacion($valor_iva)
+	pago($valor_total)
 ?>
